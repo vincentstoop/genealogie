@@ -50,7 +50,7 @@ group :development do
   gem 'capistrano-passenger', '~> 0.2.0'
   
   # Add this if you're using rbenv
-  # gem 'capistrano-rbenv', '~> 2.1'
+  gem 'capistrano-rbenv', '~> 2.1'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
