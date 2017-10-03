@@ -41,4 +41,4 @@ set :rbenv_ruby, '2.4.2'
 Dir.glob("lib/capistrano/tasks/*.rake").each { |r| import r }
 
 require 'capistrano/rails'
-require 'capistrano/passenger'
+require 'passenger'
