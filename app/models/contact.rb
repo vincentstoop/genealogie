@@ -21,6 +21,10 @@ class Contact < ApplicationRecord
     return klass
   end
   
+  # def self.find
+  #   find.where(klaas: !("Vin"))
+  # end
+  
   # def to_param
   #   uri = "#{id}-#{name}"
   #   debugger

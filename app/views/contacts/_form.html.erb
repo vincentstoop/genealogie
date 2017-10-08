@@ -1,10 +1,10 @@
-<%= simple_form_for @contact do |form| %>
-  <% if contact.errors.any? %>
+<%= simple_form_for @vin do |form| %>
+  <% if @vin.errors.any? %>
     <div id="error_explanation">
-      <h2><%= pluralize(contact.errors.count, "error") %> prohibited this contact from being saved:</h2>
+      <h2><%= pluralize(@vin.errors.count, "error") %> prohibited this @vin from being saved:</h2>
 
       <ul>
-      <% contact.errors.full_messages.each do |message| %>
+      <% @vin.errors.full_messages.each do |message| %>
         <li><%= message %></li>
       <% end %>
       </ul>
@@ -13,15 +13,15 @@
 
   <div class="field">
     <%= form.label :name %>
-    <%= form.text_field :name, id: :contact_name %>
+    <%= form.text_field :name, id: :vin_name %>
   </div>
   <div class="field">
     <%= form.label :type %>
-    <%= form.text_field :klaas, id: :contact_type %>
+    <%= form.text_field :klaas, id: :vin_type %>
   </div>
 
   <div class="field">
-      <%= dynamic_attribute_inputs(form, contact) %>
+      <%= dynamic_attribute_inputs(form, @vin) %>
   </div>
 
   <div class="actions">

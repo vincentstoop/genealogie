@@ -11,14 +11,14 @@
   </thead>
 
   <tbody>
-    <% @contacts.each do |contact| %>
+    <% @vins.each do |contact| %>
       <tr>
         <td><%= contact.name %></td>
         <td><%= contact.age %></td>
         <td>Type: <%= contact.klaas %></td>
-        <td><%= link_to 'Show', contact %></td>
-        <td><%= link_to 'Edit', edit_contact_path(contact) %></td>
-        <td><%= link_to 'Destroy', contact, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Show', instance_path(contact) %></td>
+        <td><%= link_to 'Edit', edit_instance_path(contact)%></td>
+        <td><%= link_to 'Destroy', Rails.application.routes.url_helpers.send("#{contact.klaas.downcase}_path", contact), method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
